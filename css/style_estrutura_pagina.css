@@ -12,33 +12,112 @@
 
 /*CRIANDO VARIÁVEIS*/
 :root{
-    --cor01: #cf9cd1;
-    --cor02: #d86dbd;
-    --cor03: #ff8af5;
+    --cor01: #e9d1ec;
+    --cor02: #ce99c2;
+    --cor03: #e4b9dd;
     --branca: #ffffff;
 }
-/* FORMATANDO A TAG main PELO ID geral*/
+
+/*FORMATANDO A TAG main PELO ID geral*/
 #geral{
     margin: 20px;
-
 }
+
 /*FORMATANDO O CABEÇALHO*/
 #cabecalho{
-    background-color: deeppink;
+    background-color: #f78ddc;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:  20px;
-   
-
+    padding: 20px;
+    height: 60px;
 }
-/*CONFIGURANDO MENU NA HORIZONTAL*/
+
+/*CONFIGURANDO MENU DA HORIZONTAL*/
 #menu ul {
     display: flex;
     gap: 30px;
     list-style: none;
 }
+
 #menu ul img{
     width: 25px;
     height: 25px;
 }
+
+/*FORMATANDO SECTION pesquisa*/
+#pesquisa{
+    height: 200px;
+    background-color: var(--cor01);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pesquisa input{
+    width: 800px;
+    height: 80px;
+    background-color: var(--branca);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.4em;
+    color: var(--cor02);
+}
+
+#pesquisa input::placeholder{
+    font-size: 1.3em;
+    font-style: italic;
+    color: var(--cor02);
+}
+
+/*FORMATANDO OS CARDS*/
+#cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    margin: 20px 0px;
+    width: 250px;
+    min-height: 280px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cor02);
+    border-radius: 8px;
+}
+
+.card img{
+    width: 150px;
+    height: 200px;
+    margin: 10px 0px;
+}
+
+.card p{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 20px 0px;
+}
+
+.card h2{
+    color: var(--cor02);
+}
+
+.card button{
+    width: 200px;
+    height: 40px;
+    margin: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor03);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--cor02);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
