@@ -12,10 +12,10 @@
 
 /*CRIANDO VARIÁVEIS*/
 :root{
-    --cor01: #d5d1ec;
-    --cor02: #b368fa;
-    --cor03: #e0cef0;
-    --branca: #ffffff;
+    --cor01: #ffffff;
+    --cor02: #e4bdd0;
+    --cor03: #000000;
+    --branca: #dd8fd3;
 }
 
 /*FORMATANDO A TAG main PELO ID geral*/
@@ -72,7 +72,7 @@
 #pesquisa input::placeholder{
     font-size: 1.3em;
     font-style: italic;
-    color: var(--cor02);
+    color: var(--cor01);
 }
 
 /*FORMATANDO OS CARDS*/
@@ -133,7 +133,7 @@
 #rodape{
     width: 100%;
     height: 180px;
-    background-color: var(--cor02);
+    background-color: var(--cor03);
     margin: 20px 0px;
     padding: 10px;
     color: var(--branca);
@@ -174,4 +174,5 @@
     text-transform: uppercase;
     letter-spacing: 5px;
     text-decoration: none;
-    color: var(--cor02
+    color: var(--cor02);
+}
