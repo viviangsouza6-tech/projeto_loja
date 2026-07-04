@@ -10,7 +10,9 @@
 </head>
 <body>
    <main id="geral">
-   
+    <header id="cabecalho">
+        <div id="logo">
+        Bella chic
         </div>
 
         <nav id="menu">
@@ -18,16 +20,17 @@
                 <li><a href="paginas/cadastro.html"> Cadastro </a></li>
                 <li><a href="paginas/sobre.html"></a>Sobre</li>
                 <li><a href="paginas/login.html">Login</a></li>
-                <li><a href="paginas/carrinho.html"><img src="imagens/icones/carrinho.png" alt="Carrinho"></a></li>
+                <li><a href="paginas/carrinho.html"><img src="../imagens/icones/carrojr.png" alt="Carrinho"></a></li>
             </ul>
         </nav>
     </header>
 
-    <h3>Cadastro pessoa</h3>
+    
     <section id="form">
         
-
         <form id="form-pessoa">
+        <h3>Cadastro pessoa</h3>
+
 
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome" class="input001" required maxlength="60" placeholder="Digite seu nome.">
@@ -68,17 +71,19 @@
             <label for="senha">Senha</label>
             <input type="text" name="senha" id="senha" class="input002" required maxlength="30" placeholder="Digite a senha.">
 
-            <input type="checkbox" name="notificacao" id="notificacao">Deseja receber nossas ofertas pelo email e pelo Whatsapp?
+            <div class="check">
+                <input type="checkbox" name="notificacao" id="notificacao"> 
+                <label for="notificacao">
+                    Deseja receber nossas ofertas pelo email e pelo Whatsapp?
+                </label>
+               </div>
+    
+               <div class="botoes">
+                <button type="submit" id="btn-add">Cadastrar</button>
+                <button type="reset" id="btn-limpar">Limpar</button>
+    
+               </div>
 
-            <button type="submit" id="btn-add">Cadastrar</button>
-            <button type="reset" id="btn-limpar">Limpar</button>
-
-
-
-
-
-
-            <label for=""></label>
         </form>
 
     </section>
