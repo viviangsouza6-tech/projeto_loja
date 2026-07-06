@@ -62,7 +62,7 @@
 #pesquisa input{
     width: 800px;
     height: 80px;
-    background-color: var(--branca);
+    background-color: var(--cor02);
     border-radius: 8px;
     padding: 10px;
     font-size: 1.4em;
@@ -133,7 +133,7 @@
 #rodape{
     width: 100%;
     height: 180px;
-    background-color: #42008d;
+    background-color: #95669b;
     margin: 20px 0px;
     color: var(--branca);
     display: flex;
