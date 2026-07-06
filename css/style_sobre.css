@@ -1,0 +1,77 @@
+
+@import url(style_estrutura_pagina.css);
+
+/*DEFINE AS CONFIGURAÇÔES EM TODOS OS ELEMENTOS DA PÁGINA*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+/*CRIANDO VARIÁVEIS*/
+:root{
+    --cor01: #d5d1ec;
+    --cor02: #b368fa;
+    --cor03: #e0cef0;
+    --branca: #ffffff;
+}
+
+/*FORMATANDO A TAG main PELO ID geral*/
+#geral{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*FORMATANDO O CABEÇALHO*/
+#cabecalho{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    height: 100px;
+    background-color: #e4bdd0;
+}
+
+/*CONFIGURANDO MENU DA HORIZONTAL*/
+#div-sobre{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+#menu ul img{
+    width: 45px;
+    height: 25px;
+}
+
+/*FORMATANDO O FORM*/
+#div-{
+        width: 700px;
+        margin: 20px auto;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        background: #e493d070;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+    }
+
+     #div-paragrafo{
+        background:#dd8fd3;
+        color: white;
+
+        padding: 15px;
+        margin: -30px -30px 30px -30px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+   
+    
