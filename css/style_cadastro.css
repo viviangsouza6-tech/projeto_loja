@@ -127,3 +127,38 @@
         background: #9B1C13;
         margin-left: 20px;
     }
+    /*FORMATANDO LINKS*/
+    #menu a:link{
+        font-size: 1.4em;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-decoration: none;
+        color: var(--cor02);
+    }
+
+    #menu a:visited{
+        font-size: 1.4em;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-decoration: none;
+        color: var(--cor02);
+    }
+
+    #menu a{
+        display: inline-block;
+        transition: transform .3s ease, color .3s ease;
+    }
+
+    #menu a:hover{
+        transform: translateY(-5px);
+        color: var(--cor01);
+    }
+
+    #menu a:active{
+        color: var(--cor01);
+    }
+
+    #logo img{
+        width: 220px;
+        height: auto;
+    }
