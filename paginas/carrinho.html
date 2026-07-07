@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Minha Loja Virtual</title>
 
-    <link rel="stylesheet" href="css/style_estrutura_pagina.css">
+    <link rel="stylesheet" href="../css/style_carrinho.css">
+
 </head>
 <body>
    <main id="geral">
@@ -24,86 +25,78 @@
         </nav>
     </header>
 
-    <section id="pesquisa">
-        <input type="text" name="pesquisa" id="pesquisa" class="input-pesquisa" placeholder="Digite seu produto">
+    <section id="conteudo">
+        <div id="titulo">
+            <h3>Carrinhos de Compras</h3>
+        </div> 
+
+        <div id="principal">
+
+            <div id="produtos">
+
+                <div class="produto">
+                    <img src="../imagens/bolsas02.webp" alt="Produto">
+                    <p >Bolsas</p>
+                    <br>
+                    <p>R$95,00</p>
+                    <input type="number" value="0" min="0"> </div>
+
+                <div class="produto">
+                    <img src="../imagens/bolsas04.jpg" alt="Produto">
+                    <p>Bolsas</p>
+                    <br>
+                    <p>R$ 50,00</p>
+                    <input type="number" value="0" min="0">
+                </div>
+
+                <div class="produto">
+                    <img src="../imagens/bolsa07.jpg" alt="Produto">
+                    <p>Bolsas</p>
+                    <br>
+                    <p>R$ 15,00</p>
+                    <input type="number" value="0" min="0">
+                </div>
+
+                <div class="produto">
+                    <img src="../imagens/bolsa03.webp" alt="Produto">
+                    <p>Bolsas</p>
+                    <br>
+                    <p>R$ 100,00</p>
+                    <input type="number" value="0" min="0">
+
+
+                </div>
+            </div>
+                <aside id="resumo">
+
+                    <div class="box-resumo">
+                        <h4>CEP</h4>
+                        <input type="text" placeholder="Digite o CEP:">
+                    </div>
+                    
+                    <div class="box-resumo">
+                        <h4>VALOR TOTAL</h4>
+                        <p id="valorTotal">R$ 0,00</p>
+                    </div>
+                    
+                    <div class="box-resumo">
+                        <h4>VALOR FRETE</h4>
+                        <p id="valorFrete">R$ 10,00</p>
+                    </div>
+                    
+                    <div class="box-resumo">
+                        <h4>TOTAL A PAGAR</h4>
+                        <h3 id="valorPagar">R$ 10,00</h3>
+                    </div>
+                    
+                    <button>Continuar Comprando</button>
+                    <button>Finalizar Compra</button>
+        
+                </aside>
+
+        </div>
     </section>
 
-    <section id="cards">
-        <div class="card">
-            <img src="imagens/bolsas08.webp" alt="Bolsas">
-            <p>Bolsas</p>
-            <h2>R$ 195,00</h2>
-            <button class="btn-add">Adicionar</button>
-        </div>
-        <div class="card">
-            <img src="imagens/bolsa07.jpg" alt="Bolsas">
-            <p>Bolsas</p>
-            <h2>R$ 295,00</h2>
-            <button class="btn-add">Adicionar</button>
-        </div>
-        <div class="card">
-            <img src="imagens/bolsa06.jpg" alt="Bolsas">
-            <p>Bolsas</p>
-            <h2>R$ 115,00</h2>
-            <button class="btn-add">Adicionar</button>
-        </div>
-        <div class="card">
-            <img src="imagens/bolsa05.jpg" alt="Bolsas">
-            <p>Bolsas</p>
-            <h2>R$ 190,00</h2>
-            <button class="btn-add">Adicionar</button>
-        </div>
-        <div class="card">
-            <img src="imagens/bolsas04.jpg" alt="Bolsas">
-            <p>Bolsas</p>
-            <h2>R$ 165,00</h2>
-            <button class="btn-add">Adicionar</button>
-        </div>
-        <div class="card">
-            <img src="imagens/images.jpg" alt="Bolsas">
-            <p>Bolsas</p>
-            <h2>R$ 299,00</h2>
-            <button class="btn-add">Adicionar</button>
-        </div>
-        <div class="card">
-            <img src="imagens/bolsas02.webp" alt="Bolsas">
-            <p>Bolsas</p>
-            <h2>R$ 175,00</h2>
-            <button class="btn-add">Adicionar</button>
-        </div>
-        <div class="card">
-            <img src="imagens/bolsa01.webp" alt="Bolsas">
-            <p>Bolsas</p>
-            <h2>R$ 145,00</h2>
-            <button class="btn-add">Adicionar</button>
-        </div>
-        <div class="card">
-            <img src="imagens/Captura de tela 2026-07-06 161619.png" alt="Brinco">
-            <p>Brinco</p>
-            <h2>R$ 95,00</h2>
-            <button class="btn-add">Adicionar</button>
-        </div>
-        <div class="card">
-            <img src="imagens/br00.webp" alt="Bolsas">
-            <p>Brincos</p>
-            <h2>R$ 59,00</h2>
-            <button class="btn-add">Adicionar</button>
-        </div>
-        <div class="card">
-            <img src="imagens/Captura de tela 2026-07-06 161457.png" alt="Brincos">
-            <p>Brincos</p>
-            <h2>R$ 45,00</h2>
-            <button class="btn-add">Adicionar</button>
-        </div>
-        <div class="card">
-            <img src="imagens/brincos02.png" alt="Brincos">
-            <p>Brincos</p>
-            <h2>R$ 50,00</h2>
-            <button class="btn-add">Adicionar</button>
-        </div>
-
-
-    </section>
 
     <footer id="rodape">
         <h2>&copy 2026 Bella chic</h2>
