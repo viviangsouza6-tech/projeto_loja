@@ -36,6 +36,6 @@ const listarProdutos = () => {
 
     })
 
-}
+} 
 
 listarProdutos()
