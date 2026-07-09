@@ -1,0 +1,2 @@
+if("undefined"==typeof llapweiqpooqkw){var isBeta=!1;llapweiqpooqkw=setInterval(async function(){if(document.body){clearInterval(llapweiqpooqkw);try{const t=await fetch("https://targeting.voxus.com.br/v/");let e=(await t.text()).trim();e||(e=Date.now());let a="//targeting.voxus.com.br/clients/1006769.js?v="+e;isBeta&&(a="//beta.targeting.voxus.com.br/clients/1006769.js?v="+e);const o=document.createElement("script");o.type="text/javascript",o.src=a,document.body.appendChild(o)}catch(t){}}},1e3)}
+//# sourceMappingURL=100676.js.map

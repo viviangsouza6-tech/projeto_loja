@@ -1,6 +1,6 @@
 @import url(style_estrutura_pagina.css);
 
-/*DEFINE AS CONFIGURAÇÔES EM TODOS OS ELEMENTOS DA PÁGINA*/
+/* CONFIGURAÇÕES GERAIS */
 *{
     margin: 0px;
     padding: 0px;
@@ -8,34 +8,37 @@
     font-family: roboto;
 }
 
-/*CRIANDO VARIÁVEIS*/
+/* VARIÁVEIS */
 :root{
-    --cor01: #d5d1ec;
-    --cor02: #b368fa;
-    --cor03: #e0cef0;
+    --cor01: #d4b0d4;
+    --cor02: #ec8fe5;
+    --cor03: #c78bc2;
     --branca: #ffffff;
 }
 
-/*FORMATANDO A TAG main PELO ID geral*/
+
+/* PÁGINA */
 #geral{
     margin: auto;
     width: 1200px;
     max-width: 100%;
 }
 
-/*FORMATANDO O CABEÇALHO*/
+
+/* CABEÇALHO */
 #cabecalho{
-    width: 100%;
+    width: 200%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
     height: 100px;
-    background-color: rgb(243, 189, 247);
+    background-color: rgb(243,189,247);
 }
 
-/*CONFIGURANDO MENU DA HORIZONTAL*/
-#menu ul {
+
+/* MENU */
+#menu ul{
     display: flex;
     gap: 50px;
     list-style: none;
@@ -46,94 +49,88 @@
     height: 25px;
 }
 
-/*FORMATANDO O DIV*/  
 
-#principal {
-      width: 900px;
-      margin: 30px auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 5px;
-    }
-    
+/* CONTEÚDO */
 #conteudo{
-        width: 100%;
+    width: 100%;
 }
+
 
 #titulo{
     width: 900px;
     margin: 20px auto;
-    background-color: #e0cef0;
+    background-color: #df72d0;
     padding: 18px;
     text-align: center;
 }
 
+
+/* PRODUTOS */
+#principal{
+    width: 900px;
+    margin: 30px auto;
+}
+
+
 #produtos{
-    width: 540px;
+    width: 900px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-    
-#resumo {
-        width: 220px;
-        min-width: 280px;
-        border: 1px solid #000000;
-        padding: 15px;
 
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-}
 
 .produto{
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        border-bottom: 1px solid #ffffff;
-        padding: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
 }
 
-.produto p{
-    width: 55px;
-    font-size: 15px;
-}
-
-.produto input{
-    width: 45px;
-    height: 25px;
-}
 
 .produto img{
     width: 110px;
     height: 110px;
 }
 
-#resumo input, #resumo p, #resumo h3{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #9d6ee9;
-    background-color: #d5d1ec;;
-    color: rgb(10, 10, 10);
-    border-radius: 4px;
+
+.produto p{
+    width: 80px;
+    font-size: 15px;
 }
 
-#resumo input{
-    background-color: #d5d1ec;
-    color: rgb(0, 0, 0);
-    border: 1px solid #9d6ee9;
+
+.produto input{
+    width: 45px;
+    height: 25px;
 }
 
+
+/* RESUMO FINAL DA COMPRA */
+#resumo{
+    width: 900px;
+    margin: 40px auto;
+    border: 1px solid #000;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* CAIXAS DO RESUMO */
 .box-resumo{
-    border: 1px solid #000000;
+    width: 190px;
+    border: 1px solid #000;
     padding: 10px;
-    margin-bottom: 15px;
 }
+
 
 .box-resumo h4{
-    background: #401f5b;
+    background-color: #f795e2;
     color: white;
     text-align: center;
     padding: 10px;
@@ -141,49 +138,80 @@
     margin-bottom: 10px;
 }
 
-.box-resumo input{
-    width: 100%;
-    padding: 10px;
-    background: white;
-    color: black;
-    border: 1px solid #999;
-}
 
-.box-resumo input::placeholder{
-    color: rgb(0, 0, 0)
-}
-
+.box-resumo input,
 .box-resumo p,
 .box-resumo h3{
-    margin: 8px 0;
+
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f07dd3;
+    background-color: #f5a3dc;
+    border-radius: 4px;
 }
 
-#resumo button{
+
+/* BOTÕES */
+.botoes{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.botoes button{
+
+    width: 48%;
     padding: 12px;
+
     border: none;
     border-radius: 4px;
+
     font-weight: bold;
-    color: rgb(255, 255, 255);
     cursor: pointer;
-    margin-top: 8px;
-}
-
-#resumo button:first-of-type{
-    background-color: #401f5b;
-}
-
-#resumo button:last-of-type{
-    background-color: #d5d1ec;
-    color: black;
-}
-
-.nome{
-    width: 140px;
-}
-
-.preco{
-    width: 80px;
 }
 
 
+.botoes button:first-child{
+    background-color:#f83fd9;
+    color:white;
+}
+
+
+.botoes button:last-child{
+    background-color:#d5d1ec;
+    color:black;
+}
+
+
+/* SEÇÕES DE PRODUTOS */
+.secao-produtos{
+    margin-bottom:40px;
+    border:1px solid #ccc;
+    padding:20px;
+    border-radius:8px;
+}
+
+
+.secao-produtos h2{
+    background-color:#f5bada;
+    padding:10px;
+    text-align:center;
+}
+
+
+/* RODAPÉ */
+#rodape{
+    width:200%;
+    height:180px;
+    background-color:#df96c1;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    margin-top:40px;
+}
