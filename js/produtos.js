@@ -6,6 +6,7 @@ const sectioCards = document.querySelector('#cards')
 
 //CARREGANDO OS CARDS
 const listarProdutos = () => {
+    return produtos
 
 
     
@@ -66,6 +67,7 @@ const carregaSecoes = () =>{
 
 carregaSecoes()
 
+
 //FUNÇÂO FILTRO PRODUTO 
 const filtroProduto = (idSecao)=>{
     //FILTRANDO OS PRODUTOS A PARTIR DO REPETIÇÃO filter
@@ -113,3 +115,7 @@ const montaCards = (objProdutos) => {
 
     })
 }
+
+
+
+
