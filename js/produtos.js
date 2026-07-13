@@ -1,21 +1,27 @@
 //IMPORTANDO OS PRODUTOS DO ARQUIVO lista_produtos.js
 import {produtos} from './lista_produtos.js'
 
+//CARREGANDO PRODUTOS
+const carregandoProdutos = (idSecao) => {
+    if (idSecao == 0) {
+        //CHAMANDO AS FUNÇÕES montaCard E  listarProdutos
+        montaCards(listarProdutos())
+    } else {
+        //CHAMANDO A FUNÇÃO filtroProduto
+        filtroProduto(idSecao)
+    }
+
+    carregaSecoes()
+}
+
+    
 //PEGANDO ELEMENTOS DO DOM
-const sectioCards = document.querySelector('#cards')
+const sectionCards = document.querySelector('#cards')
 
 //CARREGANDO OS CARDS
 const listarProdutos = () => {
     return produtos
-
-
-    
-
 }
-
-//CHAMANDO A FUNÇÃO listarProdutos
-listarProdutos()
-
 
 //MONTANDO OS MENUS SEÇÕES
 const menuSecoes = () =>{
@@ -41,7 +47,26 @@ const carregaSecoes = () =>{
 
     //LIMPANDO O ELEMENTO DO DOM 
     ulMenuSecoes.innerHTML = ''
+    
+    //CRIANDO O ELEMENTO li
+     const liMenu = document.createElement('li')
 
+     //CRIANDO O ELEMENTO a ATRIBUINDO O NOME DA SEÇÃO
+    const aMenu = document.createElement('a')
+    aMenu.setAttribute('href', '#')
+    aMenu.setAttribute('class', 'lnk-secao')
+    aMenu.innerHTML= 'Todos'
+
+    aMenu.addEventListener('click', () => {
+        montaCards(listarProdutos())
+    })
+
+    //ADICIONANDO O ELEMENTO FILHO a NO li
+    
+    liMenu.appendChild(aMenu)
+    ulMenuSecoes.appendChild(liMenu)
+
+    
     //CHAMANDO A FUNÇÂO menuSecoes E PERCORRENDO O ARRAY DE SEÇÔES JÀ SELECIONADAS
     menuSecoes().forEach((elem, i)=>{
         //CRIANDO O ELEMENTO li
@@ -63,21 +88,33 @@ const carregaSecoes = () =>{
         //ADICIONANDO O ELEMENTO FILHO liMenu NO OBJETO DOM
         ulMenuSecoes.appendChild(liMenu)
     })
+
+
 }
-
-carregaSecoes()
-
-
 //FUNÇÂO FILTRO PRODUTO 
 const filtroProduto = (idSecao)=>{
     //FILTRANDO OS PRODUTOS A PARTIR DO REPETIÇÃO filter
     return produtos.filter(elem => elem.idSecao === idSecao)
 }
 
+//CAPTURANDO OS CARACTERES DO INPUT PESQUISA
+//PEGANDO O INPUT DO DOM
+const inputPesquisa = document.querySelector('#pesquisa')
+
+inputPesquisa.addEventListener('input', (evt)=>{
+    //PEGANDO O VALOR DO input E CONVERTENDO EM MINÙSCULO
+    let txtInput = evt.target.value.toLowerCase()
+
+    //FILTRANDO OS CARDS A PARTIR DO FILTER E INCLUINDO 
+    montaCards(produtos.filter(elem => elem.descricaoProduto.toLowerCase().includes(txtInput)))
+})
+
 //FUNÇÃO MONTAR CARDS
 const montaCards = (objProdutos) => {
+     //PEGANDO ELEMENTOS DO DOM
+     const sectionCards = document.querySelector('#cards')
      //LIMPANDO A SECTION cards
-    sectioCards.innerHTML = ''
+    sectionCards.innerHTML = ''
 
     //PERCORRENDO O ARRAY DE objProdutos
     objProdutos.forEach((elem, i)=>{
@@ -103,6 +140,10 @@ const montaCards = (objProdutos) => {
         btnCard.setAttribute('class', 'btn-add')
         btnCard.innerHTML = 'Adicionar'
 
+        btnCard.addEventListener('click', ()=> {
+            window.location.href = 'paginas/carrinho.html'
+        })
+
 
         //ADICIONANDO OS ELEMENTOS FILHOS AOS divCard
         divCard.appendChild(imgCard)
@@ -111,11 +152,10 @@ const montaCards = (objProdutos) => {
         divCard.appendChild(btnCard)
 
         //ADICIONANDO O divCard A SECTION CARDS
-        sectioCards.appendChild(divCard)
+        sectionCards.appendChild(divCard)
 
     })
 }
 
-
-
-
+montaCards(listarProdutos());
+carregaSecoes();

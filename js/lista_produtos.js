@@ -19,39 +19,39 @@ const produtos = [
     },
     {
         idProduto: 3,
-        descricaoProduto: "Brinco Ponto de Luz",
+        descricaoProduto: "Bolsa",
         valorUnitario: 29.90,
         unidade: "UN",
         caminhoImagem: "../imagens/bolsa01.webp",
         idSecao: 1,
-        secao: "Brincos"
+        secao: "Bolsas"
     },
     {
         idProduto: 4,
-        descricaoProduto: "Brinco Flor Delicada",
+        descricaoProduto: "Bolsa",
         valorUnitario: 42.90,
         unidade: "UN",
-        caminhoImagem: "../imagens/bolsa ",
+        caminhoImagem: "../imagens/bolsas04.jpg ",
         idSecao: 1,
-        secao: "Brincos"
+        secao: "Bolsas"
     },
     {
         idProduto: 5,
-        descricaoProduto: "Brinco Coração Prata",
+        descricaoProduto: "Bolsa ",
         valorUnitario: 36.90,
         unidade: "UN",
-        caminhoImagem: "img/brincos/brinco-coracao.jpg",
+        caminhoImagem: "../imagens/bolsas08.webp",
         idSecao: 1,
-        secao: "Brincos"
+        secao: "Bolsa"
     },
     {
         idProduto: 6,
-        descricaoProduto: "Colar Ponto de Luz",
+        descricaoProduto: "Bolsa",
         valorUnitario: 59.90,
         unidade: "UN",
-        caminhoImagem: "img/colares/colar-ponto-luz.jpg",
+        caminhoImagem: "../imagens/bls000.webp",
         idSecao: 2,
-        secao: "Colares"
+        secao: "Bolsas"
     },
     {
         idProduto: 7,
