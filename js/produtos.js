@@ -159,3 +159,4 @@ const montaCards = (objProdutos) => {
 
 montaCards(listarProdutos());
 carregaSecoes();
+        

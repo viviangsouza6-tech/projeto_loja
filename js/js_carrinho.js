@@ -13,7 +13,7 @@ const addItem = (objItem) => {
 
 //FUNÇÂO PARA LISTAR OS ITENS DO CARRINHO
 const listItens = () => {
-      const listaItens = JSON.stringify(sessionStorage.get("carrinhoSessao"))
+      const listItens = JSON.stringify(sessionStorage.get("carrinhoSessao"))
 
     montaTelaCarrinho(listItens)
 
@@ -59,12 +59,10 @@ const montaTelaCarrinho = (objListaItens) => {
         divValores.appendChild(divQuant)
         divValores.appendChild(pCalc)
         divValores.appendChild(imgRemover)
+})
 
-
-        
 }
         
-
-
 //EXPORTAÇÃO
-export { addItem }
+export {addItem}
+        
