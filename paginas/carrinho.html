@@ -1,112 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Minha Loja Virtual</title>
 
     <link rel="stylesheet" href="../css/style_carrinho.css">
-    <script src="../js/js_carrinho.js" type="module"></script>
-    <script src="../js/js/tela_carrinho.js" type="module"></script>
+
+    <script src="../js/tela_carrinho.js" type="module" defer></script>
 
 </head>
+
 <body>
-   <main id="geral">
-    <header id="cabecalho">
-        <div id="logo">
-            Bella chic
-        </div>
+    <main id="geral">
+        <header id="cabecalho">
+            <div id="logo">
+                Bella chic
+            </div>
 
-        <nav id="menu">
-            <ul>
-                <li><a href="../paginas/cadastro.html"> Cadastro </a></li>
-                <li><a href="../paginas/sobre.html">Sobre</a></li>
-                <li><a href="../paginas/login.html">Login</a></li>
-                <li><a href="../paginas/carrinho.html"><img src="imagens/icones/tarrinho.png" alt="Carrinho"></a></li>
-            </ul>
-        </nav>
-    </header>
+            <nav id="menu">
+                <ul>
+                    <li><a href="../paginas/cadastro.html"> Cadastro </a></li>
+                    <li><a href="../paginas/sobre.html">Sobre</a></li>
+                    <li><a href="../paginas/login.html">Login</a></li>
+                    <li><a href="../paginas/carrinho.html"><img src="imagens/icones/tarrinho.png" alt="Carrinho"></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <section id="conteudo">
-        <div id="titulo">
-            <h3>Carrinhos de Compras</h3>
-        </div> 
+        <section id="conteudo">
+            <div id="titulo">
+                <h3>Carrinhos de Compras</h3>
+            </div>
 
-        <div id="principal">
+            <div id="principal">
 
-            <div id="produtos">
+                <div id="produtos">
 
-                <div class="produto">
-                    <img src="../imagens/bls000.webp" alt="Produto">
-                    <p >Bolsas</p>
-                    <br>
-                    <p>R$95,00</p>
-                    <input type="number" value="0" min="0"> </div>
+                    <div class="produto">
+                        <img src="../imagens/bls000.webp" alt="Produto">
+                        <p>Bolsas</p>
+                        <br>
+                        <p>R$95,00</p>
+                        <input type="number" value="0" min="0">
+                    </div>
 
-                <div class="produto">
-                    <img src="../imagens/bolsas04.jpg" alt="Produto">
-                    <p>Bolsas</p>
-                    <br>
-                    <p>R$ 50,00</p>
-                    <input type="number" value="0" min="0">
+                    <div class="produto">
+                        <img src="../imagens/bolsas04.jpg" alt="Produto">
+                        <p>Bolsas</p>
+                        <br>
+                        <p>R$ 50,00</p>
+                        <input type="number" value="0" min="0">
+                    </div>
+
+                    <div class="produto">
+                        <img src="../imagens/bolsa07.jpg" alt="Produto">
+                        <p>Bolsas</p>
+                        <br>
+                        <p>R$ 15,00</p>
+                        <input type="number" value="0" min="0">
+                    </div>
+
+                    <div class="produto">
+                        <img src="../imagens/bolsa03.webp" alt="Produto">
+                        <p>Bolsas</p>
+                        <br>
+                        <p>R$ 100,00</p>
+                        <input type="number" value="0" min="0">
+
+
+                    </div>
+
                 </div>
 
-                <div class="produto">
-                    <img src="../imagens/bolsa07.jpg" alt="Produto">
-                    <p>Bolsas</p>
-                    <br>
-                    <p>R$ 15,00</p>
-                    <input type="number" value="0" min="0">
-                </div>
+                <aside id="resumo">
 
-                <div class="produto">
-                    <img src="../imagens/bolsa03.webp" alt="Produto">
-                    <p>Bolsas</p>
-                    <br>
-                    <p>R$ 100,00</p>
-                    <input type="number" value="0" min="0">
+                    <div class="box-resumo">
+                        <h4>CEP</h4>
+                        <input type="text" placeholder="Digite o CEP:">
+                    </div>
 
+                    <div class="box-resumo">
+                        <h4>VALOR TOTAL</h4>
+                        <p id="valorTotal">R$ 0,00</p>
+                    </div>
 
-                </div>
+                    <div class="box-resumo">
+                        <h4>VALOR FRETE</h4>
+                        <p id="valorFrete">R$ 10,00</p>
+                    </div>
 
-</div>
+                    <div class="box-resumo">
+                        <h4>TOTAL A PAGAR</h4>
+                        <h3 id="valorPagar">R$ 10,00</h3>
+                    </div>
 
-<aside id="resumo">
+                    <button>Continuar Comprando</button>
+                    <button>Finalizar Compra</button>
 
-    <div class="box-resumo">
-        <h4>CEP</h4>
-        <input type="text" placeholder="Digite o CEP:">
-    </div>
-
-    <div class="box-resumo">
-        <h4>VALOR TOTAL</h4>
-        <p id="valorTotal">R$ 0,00</p>
-    </div>
-
-    <div class="box-resumo">
-        <h4>VALOR FRETE</h4>
-        <p id="valorFrete">R$ 10,00</p>
-    </div>
-
-    <div class="box-resumo">
-        <h4>TOTAL A PAGAR</h4>
-        <h3 id="valorPagar">R$ 10,00</h3>
-    </div>
-
-    <button>Continuar Comprando</button>
-    <button>Finalizar Compra</button>
-
-</aside>
-
-                   
-
-        </div>
-    </section>
+                </aside>
 
 
-    <footer id="rodape">
-        <h2>&copy 2026 Bella chic</h2>
-        <p>Formas de pagamentos: Pix, Cartões de Débito e Crédito</p>
-    </footer>
 
-   </main>
+            </div>
+        </section>
+
+
+        <footer id="rodape">
+            <h2>&copy 2026 Bella chic</h2>
+            <p>Formas de pagamentos: Pix, Cartões de Débito e Crédito</p>
+        </footer>
+
+    </main>

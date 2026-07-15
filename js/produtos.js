@@ -1,5 +1,7 @@
 //IMPORTANDO OS PRODUTOS DO ARQUIVO lista_produtos.js
-import {produtos} from './lista_produtos.js'
+
+import { produtos } from './lista_produtos.js'
+import { addItem } from './carrinho.js'
 
 //CARREGANDO PRODUTOS
 const carregandoProdutos = (idSecao) => {
@@ -14,7 +16,6 @@ const carregandoProdutos = (idSecao) => {
     carregaSecoes()
 }
 
-    
 //PEGANDO ELEMENTOS DO DOM
 const sectionCards = document.querySelector('#cards')
 
@@ -141,6 +142,8 @@ const montaCards = (objProdutos) => {
         btnCard.innerHTML = 'Adicionar'
 
         btnCard.addEventListener('click', ()=> {
+            addItem(elem)
+            
             window.location.href = 'paginas/carrinho.html'
         })
 
@@ -157,6 +160,4 @@ const montaCards = (objProdutos) => {
     })
 }
 
-montaCards(listarProdutos());
-carregaSecoes();
-        
+carregandoProdutos(0)
