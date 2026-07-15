@@ -1,38 +1,37 @@
-import{ listItens } from "./carrinho.js"
 
-const montaTelaCarrinho= () => {
-    const sectionItensCarrinho = document.querySelector('#itens-carrinho')
-    sectionItensCarrinho.innerHTML = ''
+import { listItens, removeItem } from './carrinho.js'
 
-    listItens.forEach((elem, i) => {
+const montaTelaCarrinho = () => {
+    const divProdutos = document.querySelector('#produtos')
+
+    divProdutos.innerHTML = ''
+
+    listItens().forEach((elem, i) => {
         const sectionItem = document.createElement('section')
-        sectionItem.setAttribute('class', 'item')
-
-        const divImgItem = document.createElement('div')
-        divImgItem.setAttribute('class', 'img-item')
+        sectionItem.setAttribute('class', 'produto')
 
         const imgItem = document.createElement('img')
-        imgItem.setAttribute('src', elem.caminho_imagem)
-        imgItem.setAttribute('alt', elem.descricao_produto)
+        imgItem.setAttribute('src', elem.caminhoImagem)
+        imgItem.setAttribute('alt', elem.descricaoProduto)
 
-        imgItem.appendChild(imgItem)
+        sectionItem.appendChild(imgItem)
 
         const divDescricaoItens = document.createElement('div')
         divDescricaoItens.setAttribute('class', 'descricao-itens')
 
         const divDescricao = document.createElement('div')
         divDescricao.setAttribute('class', 'descricao')
-        divDescricao.innerHTML = elem.descricao_produto
+        divDescricao.innerHTML = elem.descricaoProduto
 
         const divValores = document.createElement('div')
         divValores.setAttribute('class', 'valores')
 
         const pItem = document.createElement('p')
-        pItem.innerHTML = `R$ ${parseFloat(elem. valor_unitario).toFixed
+        pItem.innerHTML = `R$ ${parseFloat(elem.valorUnitario).toFixed
         (2).replace('.', '.')}`
 
         const divQuant = document.createElement('div')
-        divQuant.setAttribute('class', input-quantidade)
+        divQuant.setAttribute('class', 'input-quantidade')
 
         const inputQuantidade = document.createElement('input')
         inputQuantidade.setAttribute('type', 'number')
@@ -43,21 +42,31 @@ const montaTelaCarrinho= () => {
 
         divQuant.appendChild(inputQuantidade)
 
-        const pCalc= document.createElement('p')
-        pCalc.innerHTML = `R$ ${elem.valor_unitario * 1}`
+        const pCalc = document.createElement('p')
+        pCalc.innerHTML = `R$ ${elem.valorUnitario * 1}`
 
         const imgRemover = document.createElement('img')
         imgRemover.setAttribute('src', '../imagens/icones/remover.png')
         imgRemover.setAttribute('alt', 'remover')
 
+        imgRemover.addEventListener('click', () => {
+            removeItem(i);
+            montaTelaCarrinho();
+        });
+
         divValores.appendChild(pItem)
         divValores.appendChild(divQuant)
         divValores.appendChild(pCalc)
         divValores.appendChild(imgRemover)
+         
+        divDescricaoItens.appendChild(divDescricao)
+        divDescricaoItens.appendChild(divValores)
 
+        sectionItem.appendChild(divDescricaoItens)
+
+        divProdutos.appendChild(sectionItem)
 
     })
 }
-        
-//EXPORTAÇÃO
-export { addItem, listItens }
+
+montaTelaCarrinho()
