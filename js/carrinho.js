@@ -14,7 +14,8 @@ const item = (objProduto) => {
     }
 
     return item
-}
+} 
+console.log(itenscarrinho.findIndex(elem=> elem.idProduto == 80 ))
 
 //FUNÇÃO PARA ADICIONAR ITEM
 const addItem = (objItem) => {
