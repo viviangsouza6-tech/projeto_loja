@@ -161,3 +161,4 @@ const montaCards = (objProdutos) => {
 }
 
 carregandoProdutos(0)
+sectionCards(0)

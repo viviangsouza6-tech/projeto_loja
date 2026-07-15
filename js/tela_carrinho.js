@@ -27,25 +27,23 @@ const montaTelaCarrinho = () => {
         inputQuantidade.setAttribute('name', `quant${i}`)
         inputQuantidade.setAttribute('id', `quant${i}`)
         inputQuantidade.setAttribute('class', 'input-item')
-        inputQuantidade.setAttribute('value', 1)
+        inputQuantidade.setAttribute('value', elem.quantidade)
         
         const pSubTotal = document.createElement('p')
         pSubTotal.setAttribute('class', 'vlr-subtotal')
         pSubTotal.innerHTML = `Preço: R$ ${elem.valorUnitario}`
 
-        const aRemover = document.createElement('a')
-        aRemover.setAttribute('src','#')
-        aRemover.setAttribute('class', 'lnk-remover')
-        aRemover.innerHTML = `Remover`
-
         const imgRemover = document.createElement('img')
-        imgRemover.setAttribute('src', '../imagens/icones/remover.png')
+        imgRemover.setAttribute('src', '../imagens/icones/remover.jpg')
         imgRemover.setAttribute('alt', 'remover')
 
-        imgRemover.addEventListener('click', () => {
-            removeItem(i);
+        imgRemover.addEventListener('click', () => { if(confirm(`tem certeza que deseja remover ${elem.descricaoProduto} do carrinho?`)){
+            removeItem(i)
+        }
+           
             montaTelaCarrinho();
         });
+
         
 
         divItem.appendChild(imgItem)
@@ -53,7 +51,7 @@ const montaTelaCarrinho = () => {
         divItem.appendChild(pVlrUnitario)
         divItem.appendChild(inputQuantidade)
         divItem.appendChild(pSubTotal)
-        divItem.appendChild(aRemover)
+        divItem.appendChild(imgRemover)
 
 
         divItensCarrinho.appendChild(divItem)
@@ -63,6 +61,7 @@ const montaTelaCarrinho = () => {
 }
 
 montaTelaCarrinho()
+
 
 
 
