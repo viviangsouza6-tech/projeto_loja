@@ -18,11 +18,33 @@ const item = (objProduto) => {
 console.log(itenscarrinho.findIndex(elem=> elem.idProduto == 80 ))
 
 //FUNÇÃO PARA ADICIONAR ITEM
-const addItem = (objItem) => {
-    itenscarrinho.push(objItem)
+const addItem = (objProduto) => {
 
-    sessionStorage.setItem("carrinhoSessao", JSON.stringify(itenscarrinho))
+    const pos = itenscarrinho.findIndex(
+        item => item.idProduto === objProduto.idProduto
+    )
 
+    if (pos >= 0) {
+
+        itenscarrinho[pos].quantidade++
+
+    } else {
+
+        itenscarrinho.push({
+            idProduto: objProduto.idProduto,
+            descricaoProduto: objProduto.descricaoProduto,
+            valorUnitario: objProduto.valorUnitario,
+            unidade: objProduto.unidade,
+            caminhoImagem: objProduto.caminhoImagem,
+            quantidade: 1
+        })
+
+    }
+
+    sessionStorage.setItem(
+        "carrinhoSessao",
+        JSON.stringify(itenscarrinho)
+    )
 }
 
 //FUNÇÂO PARA LISTAR OS ITENS DO CARRINHO

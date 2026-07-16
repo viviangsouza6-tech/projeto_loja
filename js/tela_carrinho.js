@@ -29,10 +29,36 @@ const montaTelaCarrinho = () => {
         inputQuantidade.setAttribute('class', 'input-item')
         inputQuantidade.setAttribute('value', elem.quantidade)
         
+        inputQuantidade.addEventListener('input', (e) => {
+
+            let qtd = parseInt(e.target.value)
+        
+            if (isNaN(qtd) || qtd < 1) {
+                qtd = 1
+                e.target.value = 1
+            }
+        
+            elem.quantidade = qtd
+        
+            const itens = listItens()
+            itens[i].quantidade = qtd
+        
+            sessionStorage.setItem(
+                "carrinhoSessao",
+                JSON.stringify(itens)
+            )
+        
+            pSubTotal.innerHTML =
+                `Subtotal: R$ ${(elem.valorUnitario * qtd).toFixed(2)}`
+        
+            calcularTotal()
+        
+        })
+        
         const pSubTotal = document.createElement('p')
         pSubTotal.setAttribute('class', 'vlr-subtotal')
-        pSubTotal.innerHTML = `Preço: R$ ${elem.valorUnitario}`
-
+        pSubTotal.innerHTML =
+        `Subtotal: R$ ${(elem.valorUnitario * elem.quantidade).toFixed(2).replace('.', ',')}`
         const imgRemover = document.createElement('img')
         imgRemover.setAttribute('src', '../imagens/icones/remover.jpg')
         imgRemover.setAttribute('alt', 'remover')
@@ -42,6 +68,7 @@ const montaTelaCarrinho = () => {
         }
            
             montaTelaCarrinho();
+            calcularTotal()
         });
 
         
@@ -61,6 +88,27 @@ const montaTelaCarrinho = () => {
 }
 
 montaTelaCarrinho()
+
+const calcularTotal = () => {
+
+    let total = 0
+
+    listItens().forEach(item => {
+
+        total += item.valorUnitario * item.quantidade
+
+    })
+
+    document.querySelector("#valorTotal").innerHTML =
+        `R$ ${total.toFixed(2).replace('.', ',')}`
+
+    const frete = 10
+
+    document.querySelector("#valorPagar").innerHTML =
+        `R$ ${(total + frete).toFixed(2).replace('.', ',')}`
+
+}
+calcularTotal()
 
 
 
